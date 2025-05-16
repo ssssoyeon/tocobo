@@ -1,0 +1,199 @@
+.hero {
+    padding: 0;
+
+    .inner {
+        align-items: center;
+    }
+
+    .swiper-slide {
+        height: 90rem;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        z-index: 0;
+
+        &.hero_sl_1 {
+            background-image: url('/img/slider2.png');
+
+            .t-wrap {
+                color: #fff;
+
+                .txt {
+
+                    color: #fff;
+                }
+            }
+        }
+
+        &.hero_sl_2 {
+            background-image: url('/img/slider3.png');
+
+            .inner {
+                justify-content: center;
+                text-align: center;
+
+                .t-wrap {
+                    color: #009bde;
+
+                    .txt {
+
+                        color: #009bde;
+                    }
+                }
+            }
+
+        }
+
+        &.hero_sl_3 {
+            background-image: url('/img/slider1.png');
+
+            .t-wrap {
+                color: #dc272d;
+
+                .txt {
+
+                    color: #dc272d;
+                }
+            }
+        }
+
+        &.hero_sl_4 {
+            background-image: url('/img/slider4.png');
+
+            .t-wrap {
+                color: #009bde;
+
+                .txt {
+
+                    color: #009bde;
+                }
+            }
+        }
+    }
+
+    .hero_nav {
+        position: absolute;
+        z-index: 3;
+        bottom: 8.7rem;
+        left: calc(50% - 80rem);
+        display: flex;
+        gap: 2rem;
+
+        .arr_prev,
+        .arr_next {
+            width: 5rem;
+            height: 1.7rem;
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center;
+        }
+
+        .arr_prev {
+            background-image: url('/img/icon_main_ban_arrow_prev.svg');
+        }
+
+        .arr_next {
+            background-image: url('/img/icon_main_ban_arrow_next.svg');
+        }
+
+        .swiper-pagination {
+            position: relative;
+            width: 5rem;
+            height: 5rem;
+            color: #fff;
+            font-size: 0;
+
+            &:after {
+                display: block;
+                content: "";
+                position: absolute;
+                width: 1px;
+                height: 50px;
+                background-color: #fff;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%) rotate(45deg);
+            }
+
+            .swiper-pagination-current {
+                position: absolute;
+                font-size: 2.2rem;
+                top: 0;
+                left: 0;
+            }
+
+            .swiper-pagination-total {
+                position: absolute;
+                font-size: 2.2rem;
+                right: 0;
+                bottom: 0;
+            }
+
+        }
+
+    }
+
+
+    @media screen and (max-width:1111px) {
+
+        .swiper-slide {
+            height: 108rem;
+            background-position: center top;
+
+            &::before {
+                display: block;
+                content:"";
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                height: 15rem;
+                width: 100%;
+                background: linear-gradient(180deg, rgba(255, 255, 255, 0), #fff);
+                z-index: 4;
+            }
+
+            .t-wrap {
+                position: absolute;
+                left: 7.2vw;
+                bottom: 14.5rem;
+
+            }
+
+            &.hero_sl_2 .inner {
+                text-align: left;
+            }
+
+            &.hero_sl_1 {
+                background-image: url('/img/mo_main0.png');
+            }
+            &.hero_sl_2 {
+                background-image: url('/img/mo_main02.png');
+            }
+            &.hero_sl_3 {
+                background-image: url('/img/mo_main03.png');
+            }
+            &.hero_sl_4 {
+                background-image: url('/img/mo_main3.png');
+            }
+        }
+
+        .hero_nav {
+            left: 7.2vw;
+            bottom: 3.9rem;
+            .arr_prev{
+                background-image: url('/img/r_arrow_prev.svg');
+            }
+            .arr_next{
+                background-image: url('/img/r_arrow_next.svg');
+            }
+            .swiper-pagination {
+                color: #dc272d;
+            }
+             .swiper-pagination:after {
+                background-color: #dc272d;
+            }
+        }
+
+    }
+
+}

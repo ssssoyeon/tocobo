@@ -1,0 +1,41 @@
+.top_banner {
+    height: 4rem;
+    background-color: #dc272d;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    transition: transform .3s ease-in-out;
+    z-index: 5;
+
+    .tb_slider {
+        height: 100%;
+
+        a {
+            color: #fff;
+            display: block;
+            line-height: 4rem;
+            font-size: 1.3rem;
+        }
+    }
+
+    .close {
+        position: absolute;
+        right: 3rem;
+        top: 1.5rem;
+        width: 1.5rem;
+        height: 1.5rem;
+        font-size: 0;
+        z-index: 2;
+        cursor: pointer;
+        background: url('/img/icon_pop_close.png') no-repeat center/contain;
+    }
+
+    @media screen and (max-width:599px) {
+
+        .close {
+            right: 1.5rem;
+        }
+    }
+}

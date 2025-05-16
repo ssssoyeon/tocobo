@@ -1,0 +1,103 @@
+.sc3 {
+  padding: 13rem 0 0;
+
+  &::after {
+    display: block;
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 10rem;
+    bottom: 0;
+    background-color: #eef8ff;
+    z-index: -1;
+  }
+
+  .inner {
+    justify-content: space-between;
+
+    .con_tit {
+      color: #009bde;
+    }
+
+    // brand_talk_img1~4.png
+    .s3_sl_wrap {
+      position: relative;
+      width: 80rem;
+      height: 50rem;
+
+      .in {
+        position: absolute;
+        width: 200%;
+
+        height: 100%;
+        overflow: hidden;
+
+        .swiper {
+          height: 100%;
+
+          .swiper-slide>div {
+            height: 100%;
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+
+          }
+
+          .s3_sl_1 {
+            background-image: url(/img/brand_talk_img1.png);
+          }
+
+          .s3_sl_2 {
+            background-image: url(/img/brand_talk_img2.png);
+          }
+
+          .s3_sl_3 {
+            background-image: url(/img/brand_talk_img3.png);
+          }
+
+          .s3_sl_4 {
+            background-image: url(/img/brand_talk_img4.png);
+          }
+        }
+      }
+    }
+  }
+
+
+  @media screen and (max-width:1111px) {
+    .inner {
+      flex-direction: column;
+      gap: 5rem;
+      padding: 0 2rem;
+
+    }
+  }
+
+  @media screen and (max-width:800px) {
+    .inner {
+      .s3_sl_wrap {
+        width: 50rem;
+        height: 35rem;
+      }
+    }
+  }
+
+  @media screen and (max-width:600px) {
+    .inner {
+      .s3_sl_wrap {
+        width: 40rem;
+        height: 30rem;
+      }
+    }
+  }
+
+  @media screen and (max-width:500px) {
+    .inner {
+      .s3_sl_wrap {
+        width: 100%;
+        height: calc(30rem - 14vw);
+      }
+    }
+  }
+
+}

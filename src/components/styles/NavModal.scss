@@ -1,0 +1,52 @@
+.navModal {
+  position:fixed ;
+  z-index: 6;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  background-color: #eef8ff;
+  visibility: hidden;
+  padding:2rem 2rem 0;
+  &.open{
+    opacity: 1;
+    visibility: visible;
+  }
+  .inner {
+    height: auto;
+    justify-content: space-between;
+    align-items: center;
+
+    .h_right{
+      display: flex;
+      gap: 2rem;
+    }
+    .nav-modal-close{
+      display: block;
+      width: 4.7rem;
+    }
+  }
+  nav {
+    margin-top: 5.2rem;
+    li{
+      margin-top: 2.5rem;
+      a {
+        color: #dc272d;
+        font-size: 3.3rem;
+        font-weight: 400;
+        line-height: 1;
+      }
+    }
+  }
+  .join-wrap{
+    position: absolute;
+    bottom: 3rem;
+    a{
+      font-size: 1.6rem;
+      color:#231f20;
+      display: block;
+      margin-top: 1.2rem;
+    }
+  }
+}
